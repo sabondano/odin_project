@@ -15,4 +15,12 @@ describe Enumerable do
     answer.should == solution
   end
 
+  it "has a my_each_with_index method that works like ruby's #each_with_index" do
+    test_array = []
+    @an_array.my_each_with_index do |element, index|
+      test_array << "#{index}: #{element}"
+    end
+    test_array.should == ["0: 1", "1: 2", "2: 3"]
+  end
+
 end
